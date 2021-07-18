@@ -46,7 +46,7 @@ export function CommunityBox(props) {
                             return (
                                 <li key={itemAtual.id}>
 
-                                    <a
+                                    {/* <a
                                         onClick={() => {
                                             router.push({
                                                 pathname: '/community',
@@ -54,6 +54,10 @@ export function CommunityBox(props) {
                                             })
                                         }}
                                     >
+                                        <img src={itemAtual.imageUrl} />
+                                        <span>{itemAtual.title}</span>
+                                    </a> */}
+                                    <a>
                                         <img src={itemAtual.imageUrl} />
                                         <span>{itemAtual.title}</span>
                                     </a>
