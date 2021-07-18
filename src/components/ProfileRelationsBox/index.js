@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProfileRelationsBoxWrapper } from "../ProfileRelations";
+import Link from 'next/link'
 
 export function ProfileBox(props) {
 
@@ -43,13 +44,18 @@ export function CommunityBox(props) {
                         props.comunidades.map((itemAtual) => {
                             return (
                                 <li key={itemAtual.id}>
+                                    <Link href={`/community/${itemAtual.id}`}>
 
-                                    <a href={`/community/${itemAtual.id}`}
-                                       
-                                    >
-                                        <img src={itemAtual.imageUrl} />
-                                        <span>{itemAtual.title}</span>
-                                    </a>
+                                        <a>
+
+                                            <img src={itemAtual.imageUrl} />
+                                            <span>{itemAtual.title}</span>
+                                        </a>
+
+
+                                    </Link>
+
+
 
 
                                 </li>
