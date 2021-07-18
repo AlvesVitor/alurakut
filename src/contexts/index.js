@@ -6,7 +6,6 @@ export const AuthContext = createContext({});
 function AuthProvider({ children }) {
     const [tema, setTema] = useState(Theme.classico);
 
-
     function SelecionaTema(e) {
         setTema(e)
     }

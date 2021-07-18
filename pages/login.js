@@ -1,5 +1,4 @@
 import React from 'react';
-// Hook do NextJS
 import { useRouter } from 'next/router';
 import nookies from 'nookies';
 
@@ -21,7 +20,6 @@ export default function LoginScreen() {
         <section className="formArea">
           <form className="box" onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
-            // alert('Alguém clicou no botão!')
             console.log('Usuário: ', githubUser)
             fetch('https://alurakut.vercel.app/api/login', {
               method: 'POST',
@@ -73,7 +71,7 @@ export default function LoginScreen() {
 
         <footer className="footerArea">
           <p>
-            © 2021 Criado por Vitor Alves - <a href="/">Sobre o Orkut.br</a> - <a href="/">Centro de segurança</a> - <a href="/">Privacidade</a> - <a href="/">Termos</a> - <a href="/">Contato</a>
+            © 2021 Criado por Vitor Alves na Imersão Alura - <a href="/">Sobre o Orkut.br</a> - <a href="/">Centro de segurança</a> - <a href="/">Privacidade</a> - <a href="/">Termos</a> - <a href="/">Contato</a>
           </p>
         </footer>
       </div>
