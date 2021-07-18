@@ -20,9 +20,9 @@ export default function Home(props) {
     'mvmaciel',
     'RafaBertoni',
     'LuisLeite97',
+    'omariosouto',
     'carloszaparoli',
     'juunegreiros',
-    'omariosouto',
 
   ]
   React.useEffect(function () {
