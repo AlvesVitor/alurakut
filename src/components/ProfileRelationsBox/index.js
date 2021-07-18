@@ -46,26 +46,17 @@ export function CommunityBox(props) {
                             return (
                                 <li key={itemAtual.id}>
 
-                                    {/* <a 
-                                    onClick={() => {
-                                        router.push({
-                                            pathname: '/community',
-                                            query: { data: itemAtual.id }
-                                        })
-
-                                    }}
-                                    
-                                    > */}
-
-                                    <a>
+                                    <a
+                                        onClick={() => {
+                                            router.push({
+                                                pathname: '/community',
+                                                query: { data: itemAtual.id }
+                                            })
+                                        }}
+                                    >
                                         <img src={itemAtual.imageUrl} />
                                         <span>{itemAtual.title}</span>
-
                                     </a>
-
-
-
-                                    {/* </a> */}
 
                                 </li>
                             )
