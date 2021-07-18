@@ -33,10 +33,10 @@ export function AlurakutMenu({ githubUser }) {
         <AlurakutMenu.Logo src={`${BASE_URL}/logo.svg`} logoCor={tema.logoCor}/>
 
         <nav style={{ flex: 1 }}>
-          {[{ name: 'Inicio', slug: '/' }, { name: 'Amigos', slug: '/amigos' }, { name: 'Comunidades', slug: '/comunidades' }].map((menuItem) => (
-            <Link key={`key__${menuItem.name.toLocaleLowerCase()}`} href={`${menuItem.slug.toLocaleLowerCase()}`}>
+          {[{ name: 'Inicio', slug: '/' }, { name: 'Amigos', slug: '/amigos' }, { name: 'Comunidades', slug: '/community' }].map((menuItem) => (
+            <a key={`key__${menuItem.name.toLocaleLowerCase()}`} >
               {menuItem.name}
-            </Link>
+            </a>
           ))}
         </nav>
 

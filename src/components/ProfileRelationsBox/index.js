@@ -2,7 +2,6 @@ import React from 'react';
 import { ProfileRelationsBoxWrapper } from "../ProfileRelations";
 import { useRouter } from 'next/router';
 
-
 export function ProfileBox(props) {
 
     return (
@@ -46,16 +45,18 @@ export function CommunityBox(props) {
                         props.comunidades.map((itemAtual) => {
                             return (
                                 <li key={itemAtual.id}>
+
                                     <a onClick={() => {
                                         router.push({
-                                            pathname: '/comunidade',
-                                            query: { data: itemAtual.id}
+                                            pathname: '/community',
+                                            query: { data: itemAtual.id }
                                         })
-                                      
+
                                     }}>
-                                        <img src={itemAtual.imageUrl}  />
+                                        <img src={itemAtual.imageUrl} />
                                         <span>{itemAtual.title}</span>
                                     </a>
+
                                 </li>
                             )
                         })
