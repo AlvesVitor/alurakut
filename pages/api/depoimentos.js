@@ -1,0 +1,27 @@
+import { SiteClient } from 'datocms-client';
+
+export default async function recebedorDeRequests(request, response) {
+    if(request.method === 'POST') {
+        const TOKEN = 'f2280795597f80b3170a32e5595821';
+        const client = new SiteClient(TOKEN);
+        
+        // Validar os dados, antes de sair cadastrando
+        const registroCriado = await client.items.create({
+            itemType: "976584", 
+            ...request.body,
+           
+        })
+    
+        console.log(registroCriado);
+    
+        response.json({
+            dados: 'Algum dado qualquer',
+            registroCriado: registroCriado,
+        })
+        return;
+    }
+
+    response.status(404).json({
+        message: 'Ainda não temos nada no GET, mas no POST tem!'
+    })
+}

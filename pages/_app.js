@@ -1,26 +1,49 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import React from 'react';
+import { AlurakutStyles } from '../src/lib/AlurakutCommons';
+import AuthProvider from "../src/contexts/index";
+
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  /* Reset CSS (Necolas Reset CSS <3) */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  body {
+    font-family: sans-serif;
+    background-color:  #D9E6F6;
+  }
+  #__next {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  ${AlurakutStyles}
 `
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: 'red',
   },
 }
 
 export default function App({ Component, pageProps }) {
+
   return (
-    <>
+    <AuthProvider>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+
+      <ThemeProvider theme={theme} >
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+
+    </AuthProvider>
   )
 }
