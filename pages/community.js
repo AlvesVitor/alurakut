@@ -11,8 +11,9 @@ export default function Community() {
     const [comunidades, setComunidades] = React.useState([]);
     const [comunidade, setComunidade] = React.useState([]);
     const { tema } = useContext(AuthContext);
-
+    
     let codigo = window.location.search.replace(/([^\d])+/gim, '');
+    
     React.useEffect(function () {
         // API GraphQL
         fetch('https://graphql.datocms.com/', {
@@ -227,7 +228,6 @@ export default function Community() {
 
 
                         }
-
 
 
 
