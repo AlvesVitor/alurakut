@@ -48,7 +48,7 @@ export function CommunityBox(props) {
                                 <li key={itemAtual.id}>
                                     <a onClick={() => {
                                         router.push({
-                                            pathname: '/community',
+                                            pathname: '/comunidade',
                                             query: { data: itemAtual.id}
                                         })
                                       

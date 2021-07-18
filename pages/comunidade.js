@@ -7,7 +7,7 @@ import { AuthContext } from '../src/contexts';
 import { ProfileBox, CommunityBox } from "../src/components/ProfileRelationsBox";
 
 
-export default function Community() {
+export default function Comunidade() {
     const [comunidades, setComunidades] = React.useState([]);
     const [comunidade, setComunidade] = React.useState([]);
     const { tema } = useContext(AuthContext);
