@@ -139,6 +139,7 @@ export default function Home(props) {
                   placeholder="Digite seu comentario"
                   name="comentario"
                   aria-label="Digite seu comentario"
+                  autocomplete="off"
                   type="text"
                   value={comentario}
                   onChange={e => setComentario(e.target.value)}
