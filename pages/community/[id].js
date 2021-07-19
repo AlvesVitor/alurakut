@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import MainGrid from '../../src/components/MainGrid';
+import { useRouter } from "next/router"
 import Box from '../../src/components/Box';
 import { AlurakutMenu } from '../../src/lib/AlurakutCommons';
 import { ProfileCommunity } from "../../src/components/ProfileSidebar";
@@ -8,11 +9,15 @@ import { ProfileBox, CommunityBox } from "../../src/components/ProfileRelationsB
 
 
 export default function Comunidade() {
+    const router = useRouter()
+    const {
+        query: { id },
+    } = router
     const [comunidades, setComunidades] = React.useState([]);
     const [comunidade, setComunidade] = React.useState([]);
     const { tema } = useContext(AuthContext);
 
-    let codigo = window.location.pathname.replace(/([^\d])+/gim, '');
+
 
     React.useEffect(function () {
         // API GraphQL
@@ -26,7 +31,7 @@ export default function Comunidade() {
             body: JSON.stringify({
                 "query": `query{
                     allCommunities(filter:{
-                      id: {in: ${codigo}}
+                      id: {in: ${id}}
                     }){
                         title
                         id
@@ -43,7 +48,7 @@ export default function Comunidade() {
                 const comunidadesVindasDoDato = respostaCompleta.data.allCommunities;
                 setComunidade(comunidadesVindasDoDato[0])
             })
-    }, [codigo])
+    }, [id])
 
 
 

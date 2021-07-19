@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProfileRelationsBoxWrapper } from "../ProfileRelations";
-import Link from 'next/link'
+import NextLink from 'next/link'
 
 export function ProfileBox(props) {
 
@@ -44,16 +44,16 @@ export function CommunityBox(props) {
                         props.comunidades.map((itemAtual) => {
                             return (
                                 <li key={itemAtual.id}>
-                                    <Link href={`/community/${itemAtual.id}`}>
-
-                                        <a>
+                                    <NextLink
+                                        href="/community/[id]" passHref as={`/community/${itemAtual.id}`}>
+                                        <a >
 
                                             <img src={itemAtual.imageUrl} />
                                             <span>{itemAtual.title}</span>
                                         </a>
 
 
-                                    </Link>
+                                    </NextLink>
 
 
 
