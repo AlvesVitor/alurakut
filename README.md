@@ -15,6 +15,10 @@
   <img alt="Responsivo" src="./github/captura3.png"  width="100%">
 </p>
 
+### Link
+
+[Link do projeto na vercel](https://alurakut-one-wheat-34.vercel.app/login)
+
 ## :rocket: Tecnologias usadas
 <div style="display: inline_block">
  <img align="center" alt="js" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
